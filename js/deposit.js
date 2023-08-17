@@ -19,7 +19,7 @@ document.getElementById('btn-deposit').addEventListener('click', function () {
     // step-3
 depositField.value = '';
 
-// step-4
+    // step-4
 const depositTotal = document.getElementById('deposit-total');
 const valueofPreviousDepositIsString = depositTotal.innerText;
 const valueofPreviousDeposit = parseFloat(valueofPreviousDepositIsString)
