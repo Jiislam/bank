@@ -2,7 +2,9 @@
 2. Get the withdraw amount
 3. clear 
 4. get previous withdraw total
-5. calculate total withdraw */
+5. calculate total withdraw
+6.get previous balance
+ */
 
 
 // step 1:
@@ -24,4 +26,13 @@ document.getElementById('btn-withdraw').addEventListener('click',function(){
     // step 5
     const newWithdrawTotal= valueofWithdrawField + valueofPreviousWithdraw;
     withdrawTotal.innerText =newWithdrawTotal;
+    
+    // step 6
+    const previousBalance = document.getElementById('balance-total');
+    const valueofPreviousBalanceIsString = previousBalance.innerText
+    const valueofPreviousBalance = parseFloat(valueofPreviousBalanceIsString);
+
+    // step-7
+    const newBalanceTotal = valueofPreviousBalance - newWithdrawTotal;
+    previousBalance.innerText = newBalanceTotal;
 })
